@@ -6,14 +6,16 @@
 .
 ├── README.md
 ├── bin
-│   └── app.py   
+│   └── app.py
 ├── etc
 │   └── conf.json
 ├── lib
 │   ├── __init__.py
 │   └── main.py
+├── tests
+│   └── tests.py
 └── var
     └── logs
         └── log.txt
 
-5 directories, 6 files
+6 directories, 7 files
