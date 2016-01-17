@@ -8,7 +8,7 @@
 
 import time, os, random
 from lib.main import Player
-from lib.main import pygame
+#from lib.main import pygame
 
 
 
