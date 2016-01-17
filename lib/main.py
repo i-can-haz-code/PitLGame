@@ -39,8 +39,14 @@ class pygame(object):
 				pass
 
 """
-
-
+WIDTH = 800
+HEIGHT = 600
+FPS = 30
+white = (255, 255, 255)
+black = (0, 0, 0)
+red = (255, 0, 0)
+green = (0, 255, 0)
+blue = (0, 0, 255)
 
 class Player(pygame.sprite.Sprite):
 	""" 

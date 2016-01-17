@@ -13,8 +13,6 @@ import pygame
 from lib.main import Player
 #from lib.main import pygame
 
-
-
 WIDTH = 800
 HEIGHT = 600
 FPS = 30
@@ -23,8 +21,6 @@ black = (0, 0, 0)
 red = (255, 0, 0)
 green = (0, 255, 0)
 blue = (0, 0, 255)
-
-
 
 # Setting up assets
 game_folder = os.path.dirname("__file__")
