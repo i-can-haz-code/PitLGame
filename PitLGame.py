@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 
-""" This is the main body of the application/game logic. Classes are stored over in lib
+""" 
+
+This is the main body of the application/game logic. Classes are stored over in lib
 
 
 """

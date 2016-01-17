@@ -16,6 +16,9 @@ import pygame
 
 
 """
+# plz keep this mock class so people can work on stuff requireing pygame without actually
+# installing it.
+
 class pygame(object):
 	def __init__(self):
 		self.display = ''
