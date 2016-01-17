@@ -4,10 +4,8 @@
 ##Directory structure:
 
 .
-├── PitLGame -> ./bin/app.py
+├── PitLGame
 ├── README
-├── bin
-│   └── app.py
 ├── etc
 │   └── conf.json
 ├── lib
@@ -19,8 +17,7 @@
     └── logs
         └── log.txt
 
-6 directories, 8 files
-
+5 directories, 7 files
 ## Development standards.
 
 Please write test cases.

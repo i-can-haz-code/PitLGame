@@ -18,7 +18,16 @@ import pygame
 """
 class pygame(object):
 	def __init__(self):
+		self.display = ''
 		pass
+	def init():
+		pass
+	class mixer(object):
+		def __init__(self):
+			pass
+		def init():
+			pass
+
 	class sprite():
 		def __init__(self):
 			pass
