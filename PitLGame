@@ -7,6 +7,7 @@
 """
 
 import time, os, random
+import pygame
 from lib.main import Player
 #from lib.main import pygame
 
