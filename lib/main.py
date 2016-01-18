@@ -44,6 +44,8 @@ class Player(pygame.sprite.Sprite):
                 """
                 handle updating player position and character controller
                 """
+                self.speedy = 0
+                self.speedx = 0
                 keystate = pygame.key.get_pressed()
                 if keystate[pygame.K_LEFT]:
                     self.speedx = -7
