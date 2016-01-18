@@ -44,27 +44,27 @@ class Player(pygame.sprite.Sprite):
                 """
                 handle updating player position and character controller
                 """
-                self.speedx = 0
-                self.speedy = 0
                 keystate = pygame.key.get_pressed()
                 if keystate[pygame.K_LEFT]:
-                        self.speedx = -7
+                    self.speedx = -7
                 if keystate[pygame.K_RIGHT]:
-                        self.speedx = 7
+                    self.speedx = 7
                 if keystate[pygame.K_DOWN]:
-                        self.speedy = 7
+                    self.speedy = 7
                 if keystate[pygame.K_UP]:
-                        self.speedy = -7
+                    self.speedy = -7
                 self.rect.y += self.speedy
                 self.rect.x += self.speedx
                 if self.rect.right > self.WIDTH:
-                                        self.rect.right = self.WIDTH
+                    self.rect.right = self.WIDTH
                 if self.rect.left < 0:
-                                        self.rect.left = 0
-                if self.rect.bottom > self.HEIGHT:
-                        self.rect.bottom = self.HEIGHT
+                    self.rect.left = 0
+                if self.rect.bottom >= self.HEIGHT-200:
+                    self.rect.bottom = self.HEIGHT-200
                 if self.rect.top < 0:
-                        self.rect.top = 0
+                    self.rect.top = 0
+                
+
 
 
 
