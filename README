@@ -1,5 +1,17 @@
 # PitLGame
 
+## Required to run:
+
+pygame (http://www.pygame.org/hifi.html) *note for osx users. This can be a PITA to install. We can help. Ask on 
+reddit.com/r/PythonistoLearn*
+
+## to run:
+
+python PitLGame.py
+
+or
+
+./PitLGame.py
 
 ##Directory structure:
 
@@ -7,12 +19,12 @@
 ├── PitLGame
 ├── README
 ├── etc
-│   └── conf.json
+│   └── conf.json
 ├── lib
-│   ├── __init__.py
-│   └── main.py
+│   ├── __init__.py
+│   └── main.py
 ├── tests
-│   └── tests.py
+│   └── tests.py
 └── var
     └── logs
         └── log.txt
@@ -40,5 +52,3 @@ Although never is often better than *right* now.
 If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
-
-

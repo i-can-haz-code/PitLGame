@@ -1,42 +1,21 @@
 #!/usr/bin/env python3
 
-""" This is the main library to be used for the PythonistoLearn Game project
+""" 
+This is the main library to be used for the PythonistoLearn Game project
 
-So far it provides a Player class, and in comments a mock pygame class. This is intended
-for developers who do not wish to install pygame. To use the mock class for development
-comment out the pygame import and uncomment the pygame class below.
-
-"""
-
-
+So far it provides a Player class. 
 
 """
-Adding the height, width and fps
-"""
-WIDTH = 800
-HEIGHT = 800
-FPS = 60
 
 
-"""
-making some useful colours using RGB
-Add any colours you make here, so we can use them again
-"""
 
-white = (255, 255, 255)
-black = (0, 0, 0)
-red = (255, 0, 0)
-green = (0, 255, 0)
-blue = (0, 0, 255)
 
 
 __credits__ = 'u/Spectrumss, u/i_can_haz_code'
 
 
 
-import time
-import random
-import os
+import time, random, os
 import pygame
 
 
@@ -48,12 +27,16 @@ class Player(pygame.sprite.Sprite):
                 """ 
                 Set up the class.
                 """
+                self.WIDTH = 800
+                self.HEIGHT = 800
+                self.black = (0, 0, 0)
+                self.green = (0, 255, 0)
                 pygame.sprite.Sprite.__init__(self)
                 self.image = pygame.Surface((50, 40))
-                self.image.fill(green)
-                self.image.set_colorkey(black)
+                self.image.fill(self.green)
+                self.image.set_colorkey(self.black)
                 self.rect = self.image.get_rect()
-                self.rect.center = (WIDTH /2, HEIGHT / 2)
+                self.rect.center = (self.WIDTH /2, self.HEIGHT / 2)
                 self.speedy = 0
                 self.speedx = 0
 
@@ -74,51 +57,17 @@ class Player(pygame.sprite.Sprite):
                         self.speedy = -7
                 self.rect.y += self.speedy
                 self.rect.x += self.speedx
-                if self.rect.right > WIDTH:
-                                        self.rect.right = WIDTH
+                if self.rect.right > self.WIDTH:
+                                        self.rect.right = self.WIDTH
                 if self.rect.left < 0:
                                         self.rect.left = 0
-                if self.rect.bottom > HEIGHT:
-                        self.rect.bottom = HEIGHT
+                if self.rect.bottom > self.HEIGHT:
+                        self.rect.bottom = self.HEIGHT
                 if self.rect.top < 0:
                         self.rect.top = 0
 
 
 
-"""
-initiating pygame and setting up the screen and player.
-"""
-
-pygame.init()
-pygame.mixer.init()
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Game")
-clock = pygame.time.Clock()
-all_sprites = pygame.sprite.Group()
-player = Player()
-all_sprites.add(player)
-
-"""
-doing the game loop
-"""
-
-running = True
-
-while running:
-    # Ticking the clock - basically the fps
-    clock.tick(FPS)
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-    all_sprites.update()
-
-    #Draw / Render
-    screen.fill(black)
-    all_sprites.draw(screen)
-    pygame.display.flip()
-    
-
-pygame.quit()
 
 
 

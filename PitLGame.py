@@ -5,7 +5,6 @@
 
 This is the main body of the application/game logic. Classes are stored over in lib
 
-
 """
 
 import time, os, random
