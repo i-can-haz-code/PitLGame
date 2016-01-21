@@ -7,9 +7,6 @@ So far it provides a Player class.
 """
 
 
-
-
-
 __credits__ = 'u/Spectrumss, u/i_can_haz_code'
 
 
@@ -70,11 +67,11 @@ class back_pack(object):
     """ 
     This class provides a backpack in which items can be placed.
     """
-    def __init__(self):
+    def __init__(self,max_count=10):
         """
         This is an init method. It defines max_count and initializes holding
         """
-        self.max_count = 10
+        self.max_count = max_count
         self.holding = []
 
     def check_count(self):
@@ -102,8 +99,10 @@ class back_pack(object):
         """
         Removes an item from the backpack.
         """
-        self.holding.remove(item)
-
+        try:
+            self.holding.remove(item)
+        except:
+            print('{} not in backpack'.format(item))
     def list_items(self):
         """
         I mean... read the method name... it just prints the items
