@@ -15,20 +15,21 @@ or
 ##Directory structure:
 
 .
-├── PitLGame
+├── PitLGame.py
 ├── README
 ├── etc
-│   └── conf.json
+│   └── conf.json
 ├── lib
-│   ├── __init__.py
-│   └── main.py
+│   ├── __init__.py
+│   └── main.py
 ├── tests
-│   └── tests.py
+│   └── tests.py
 └── var
     └── logs
         └── log.txt
 
 5 directories, 7 files
+
 ## Development standards.
 
 Please write test cases.
