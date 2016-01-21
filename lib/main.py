@@ -4,7 +4,6 @@
 This is the main library to be used for the PythonistoLearn Game project
 
 So far it provides a Player class. 
-
 """
 
 
@@ -39,6 +38,7 @@ class Player(pygame.sprite.Sprite):
                 self.rect.center = (self.WIDTH /2, self.HEIGHT / 2)
                 self.speedy = 0
                 self.speedx = 0
+                bp = back_pack()
 
         def update(self):
                 """
@@ -66,11 +66,50 @@ class Player(pygame.sprite.Sprite):
                 if self.rect.top < 0:
                     self.rect.top = 0
                 
+class back_pack(object):
+    """ 
+    This class provides a backpack in which items can be placed.
+    """
+    def __init__(self):
+        """
+        This is an init method. It defines max_count and initializes holding
+        """
+        self.max_count = 10
+        self.holding = []
 
+    def check_count(self):
+        """
+        This method checks to ensure that max_count is greater than len(self.holding)
+        """
+        if len(self.holding) > self.max_count:
+            self.holding.pop()
+            raise(ValueError)
 
+    def add_item(self,item):
+        """
+        This method tries to add an item to the backpack. If it goes over the max_count
+        The item is not added, and a message is shown
+        """
+        try:
+            self.holding.append(item)
+            self.check_count()
+            return(True)
+        except ValueError:
+            print('Item {} could not be added. Sorry '.format(item))
+            return(False)
 
+    def remove_item(self,item):
+        """
+        Removes an item from the backpack.
+        """
+        self.holding.remove(item)
 
-
+    def list_items(self):
+        """
+        I mean... read the method name... it just prints the items
+        """
+        for item in self.holding:
+            print(item)
 
 
 
